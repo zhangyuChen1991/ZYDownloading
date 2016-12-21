@@ -43,7 +43,7 @@ public class ZYDownloading extends View {
     //弹跳到最高点的y位置 以及与中心点的垂直距离
     private float jumpHightY, distance;
     //圆圈的半径
-    private float circleRadius = 120;
+    private float circleRadius;
     private int circlePaintAlpha = 255;
     //圆形填充颜色
     private int circleColor = Color.parseColor("#A52A2A");//Color.parseColor("#A9A9A9");
@@ -245,6 +245,8 @@ public class ZYDownloading extends View {
     private void initData() {
         center = new Point(vWidth / 2f, vHeight / 2f);
 
+        float base = vWidth > vHeight ? vWidth : vHeight;
+        circleRadius = base * 0.8f / 8f;
         //初始化直线的中心点
         lineCenter = new Point(center.x, center.y);
 
@@ -543,6 +545,7 @@ public class ZYDownloading extends View {
 
     /**
      * 是否正在下载
+     *
      * @return
      */
     public boolean isDownloading() {
