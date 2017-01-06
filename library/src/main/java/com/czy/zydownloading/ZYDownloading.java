@@ -122,9 +122,9 @@ public class ZYDownloading extends View {
             }
         });
 
-        lineJumpAnim = ValueAnimator.ofFloat(0, -2.5f, 0.5f, -1f, 0.2f, 0);
+        lineJumpAnim = ValueAnimator.ofFloat(0, -2.5f, 1.3f, -1f, 0.5f, -0.2f,0);
         lineJumpAnim.setInterpolator(linearInterpolator);
-        lineJumpAnim.setDuration(300);
+        lineJumpAnim.setDuration(450);
         lineJumpAnim.addUpdateListener(LJumpUpdateListener);
 
         arrowToRectAnim = ValueAnimator.ofFloat(0, -0.5f, 1);
